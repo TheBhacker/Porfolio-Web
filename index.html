@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#inicio" class="active">Inicio</a></li>
+            <li><a href="#proyectos" class="active">Proyectos</a></li>
+            <li><a href="#contacto" class="active">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenedor de contenido principal -->
+    <div class="content-container" id="inicio">
+        <span class="badge">Disponible para trabajar 💼</span>
+        <h1><img src="https://freepngimg.com/thumb/rick_and_morty/27617-6-rick-and-morty-clipart-thumb.png" alt="Rounded avatar" class="avatar"> Hey, soy Jordi Bravo</h1>
+        <h2>Programador FullStack</h2>
+        <h3>Me dedico al Hacking y a la Programación</h3>
+        <div class="social-pills">
+            <a href="https://github.com/theBhacker" target="_blank" class="social-pill github-pill">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/github.svg" alt="GitHub" class="social-icon">
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/jordi-bravo-jorquera-2b66a52b1/" target="_blank" class="social-pill linkedin-pill">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+                LinkedIn
+            </a>
+            <a href="mailto:jbravo23@ilb.cat" class="social-pill gmail-pill">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/gmail.svg" alt="Gmail" class="social-icon">
+                Gmail
+            </a>
+        </div>
+    </div>
+
+    <!-- Sección de Proyectos -->
+    <section id="proyectos" class="proyectos-section">
+        <h2>Mis Proyectos</h2>
+        <ol class="timeline" id="project-list">
+            <!-- Los proyectos se cargarán aquí -->
+        </ol>
+    </section>
+
+    <!-- Modal para mostrar la imagen ampliada -->
+    <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="modal-caption"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
