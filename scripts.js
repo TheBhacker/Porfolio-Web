@@ -12,17 +12,14 @@ function loadProjects() {
                 projectItem.classList.add('timeline-item');
                 
                 const projectHTML = `
-                    <!-- Contenedor con el título arriba y la imagen debajo -->
                     <div class="project-left">
                         <h3 class="timeline-title">${project.project}</h3>
                         <img src="${project.image}" alt="${project.project}" class="project-image">
                     </div>
 
-                    <!-- Contenedor de la descripción, badges y el botón a la derecha -->
                     <div class="project-right">
                         <p class="timeline-description">${project.description}</p>
                         
-                        <!-- Badges -->
                         <div class="badge-container">
                             ${project.badges.map(badge => `
                                 <span class="badge" style="background-color: ${badge.color};">
@@ -32,8 +29,8 @@ function loadProjects() {
                             `).join('')}
                         </div>
 
-                        <!-- Botón Saber Más -->
-                        <a href="#" class="timeline-link">Saber más</a>
+                        <!-- Botón Saber Más con enlace al proyecto -->
+                        <a href="${project.link}" class="timeline-link" target="_blank">Saber más</a>
                     </div>
                 `;
                 

@@ -3,6 +3,7 @@
         "project": "Porfolio",
         "image": "https://private-user-images.githubusercontent.com/89321496/386312412-b8801202-3351-4033-8115-ff35866c74be.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzE2MDczNzIsIm5iZiI6MTczMTYwNzA3MiwicGF0aCI6Ii84OTMyMTQ5Ni8zODYzMTI0MTItYjg4MDEyMDItMzM1MS00MDMzLTgxMTUtZmYzNTg2NmM3NGJlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDExMTQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMTE0VDE3NTc1MlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWIzMzVmNTI3MzYwMWFjN2NmMGY1M2Y1MWI0MzJhZmIzY2RiMTViNWFlNmJlYmFlOWNlY2FmOTAxYTNiNzRiYTcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.3QMP_3y9ar3QpeG5eLF2dAV2rU4cdnxSTBDyc5lEDZo",  
         "description": "Este es mi portafolio personal donde muestro mis proyectos y habilidades en desarrollo web. Utilizo tecnologías como HTML, CSS y JavaScript para crear páginas web responsivas y dinámicas.",
+        "link": "https://github.com/TheBhacker/porfolio-web",
         "badges": [
             {"name": "HTML", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/html5.svg", "color": "#E44D26"},
             {"name": "CSS", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/css3.svg", "color": "#2965F1"},
@@ -11,8 +12,9 @@
     },
     {
         "project": "Calculadora Básica",
-        "image": "https://eiposgrados.com/wp-content/uploads/2021/05/Captura-de-pantalla-2021-05-11-a-las-11.15.44-1024x468.png",  
+        "image": "https://eiposgrados.com/wp-content/uploads/2021/05/Captura-de-pantalla-2021-05-11-a-las-11.15.44-1024x468.png", 
         "description": "Calculadora simple realizada con Python. Esta calculadora permite realizar operaciones básicas como suma, resta, multiplicación y división de forma rápida y sencilla.",
+        "link": "https://github.com/TheBhacker/Calculadora-Basica", 
         "badges": [
             {"name": "Python", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/python.svg", "color": "#e3e700"}
         ]
@@ -21,6 +23,7 @@
         "project": "KaliLinux_Custom", 
         "image": "https://i.ytimg.com/vi/Mk8rG-Eu0vI/maxresdefault.jpg",  
         "description": "Proyecto de personalización de Kali Linux para mejorar su rendimiento y funcionalidades. Este proyecto incluye scripts personalizados y configuraciones optimizadas para seguridad y pruebas de penetración.",
+        "link": "https://github.com/TheBhacker/KaliLinux_Custom",
         "badges": [
             {"name": "Bash", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/gnubash.svg", "color": "#757575"}
         ]
