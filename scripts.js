@@ -1,16 +1,13 @@
-// Función para cargar los proyectos y badges
 function loadProjects() {
-    // Cargar el archivo JSON
     fetch('badges.json')
         .then(response => response.json())
         .then(data => {
             const projectList = document.getElementById('project-list');
-            
-            // Iterar sobre los proyectos y generar el contenido HTML
+
             data.forEach(project => {
                 const projectItem = document.createElement('li');
                 projectItem.classList.add('timeline-item');
-                
+
                 const projectHTML = `
                     <div class="project-left">
                         <h3 class="timeline-title">${project.project}</h3>
@@ -29,11 +26,10 @@ function loadProjects() {
                             `).join('')}
                         </div>
 
-                        <!-- Botón Saber Más con enlace al proyecto -->
-                        <a href="${project.link}" class="timeline-link" target="_blank">Saber más</a>
+                        <a href="${project.link}" class="timeline-link shadow__btn" target="_blank">Saber más</a>
                     </div>
                 `;
-                
+
                 projectItem.innerHTML = projectHTML;
                 projectList.appendChild(projectItem);
             });
@@ -43,5 +39,4 @@ function loadProjects() {
         });
 }
 
-// Llamar a la función para cargar los proyectos cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', loadProjects);

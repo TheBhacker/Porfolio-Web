@@ -5,24 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Porfolio Web - Jordi Bravo Jorquera</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Agregar Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">    
 </head>
 <body>
 
     <!-- Menú de navegación -->
     <nav>
         <ul>
-            <li><a href="#inicio" class="active">Inicio</a></li>
-            <li><a href="#proyectos" class="active">Proyectos</a></li>
-            <li><a href="#contacto" class="active">Contacto</a></li>
+            <li><a href="#inicio" class="active">
+                <img src="https://api.iconify.design/flat-color-icons:home.svg" alt="home-icon" class="menu-icons">Inicio</a></li>
+            <li><a href="#proyectos" class="active">
+                <img src="https://api.iconify.design/flat-ui:rocket.svg" alt="project-icon" class="menu-icons">Proyectos</a></li>
+            <li><a href="#skills" class="active">👨‍💻 Skills</a></li>
         </ul>
     </nav>
 
     <!-- Contenedor de contenido principal -->
     <div class="content-container" id="inicio">
-        <span class="badge">Disponible para trabajar 💼</span>
-        <h1><img src="https://freepngimg.com/thumb/rick_and_morty/27617-6-rick-and-morty-clipart-thumb.png" alt="Rounded avatar" class="avatar"> Hey, soy Jordi Bravo</h1>
-        <h2>Programador FullStack</h2>
-        <h3>Me dedico al Hacking y a la Programación</h3>
+    <span class="button">
+        <div class="blob1"></div>
+        <div class="blob2"></div>
+        <div class="inner">Disponible para trabajar 💼</div>
+    </span>
+
+        <h1 class="btn-shine"><img src="https://freepngimg.com/thumb/rick_and_morty/27617-6-rick-and-morty-clipart-thumb.png" alt="Rounded avatar" class="avatar"> Hey, soy Jordi Bravo</h1>
+        <h2>Programador FrontEnd</h2>
+        <h3>Apasionado del Hacking y a la Programación</h3>
         <div class="social-pills">
             <a href="https://github.com/theBhacker" target="_blank" class="social-pill github-pill">
                 <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/github.svg" alt="GitHub" class="social-icon">
@@ -40,8 +49,14 @@
     </div>
 
     <!-- Sección de Proyectos -->
-    <section id="proyectos"class="proyectos-section">
-        <h2>Mis Proyectos</h2>
+    <section id="proyectos" id="proyectos-section" class="proyectos-section">
+    <div class="section-title">
+            <div class="loader">
+                <span>Mis proyectos</span>
+                <span>Mis proyectos</span>
+            </div>
+    </div>
+        <div id="particles-js"></div>
         <ol class="timeline" id="project-list">
             <!-- Los proyectos se cargarán aquí -->
         </ol>
@@ -53,6 +68,43 @@
         <img class="modal-content" id="modal-image">
         <div id="modal-caption"></div>
     </div>
+
+    <!-- Sección de Skills -->
+    <section id="skills">
+        <div class="skills-background"></div>
+        <div class="section-title">
+            <div class="loader">
+                <span>SKILLS</span>
+                <span>SKILLS</span>
+            </div>
+        </div>
+        <div class="skills-container">
+            <div class="skill-item">
+                <img src="https://api.iconify.design/devicon:github-wordmark.svg" alt="Github" class="skill-logo">
+            </div>
+            <div class="skill-item">
+                <img src="https://api.iconify.design/logos:bash.svg" alt="Bash" class="skill-logo">
+            </div>
+            <div class="skill-item">
+                <img src="https://api.iconify.design/devicon:pypi-wordmark.svg" alt="Python" class="skill-logo">
+            </div>
+            <div class="skill-item">
+                <img src="https://api.iconify.design/logos:css-3.svg" alt="css" class="skill-logo">
+            </div>
+            <div class="skill-item">
+                <img src="https://api.iconify.design/logos:html-5.svg" alt="html" class="skill-logo">
+            </div>
+            <div class="skill-item">
+                <img src="https://api.iconify.design/lineicons:vmware.svg" alt="vmware" class="skill-logo">
+            </div>
+            <div class="skill-item">
+                <img src="https://api.iconify.design/logos:linux-tux.svg" alt="linux" class="skill-logo">
+            </div>
+            <div class="skill-item">
+                <img src="https://api.iconify.design/skill-icons:windows-light.svg" alt="windows" class="skill-logo">
+            </div>
+        </div>
+    </section>
 
     <script src="scripts.js"></script>
 </body>

@@ -27,9 +27,9 @@ body {
 nav {
     display: flex;
     justify-content: center;
-    background-color: rgba(51, 51, 51, 0.9);  /* Fondo semi-transparente */
+    background-color: rgba(39, 39, 39, 0.9);  /* Fondo semi-transparente */
     padding: 10px 30px;
-    width: 80%;  /* Limita el ancho del menú */
+    width: 70%;  /* Limita el ancho del menú */
     max-width: 800px;  /* Limita el ancho máximo */
     border-radius: 50px;  /* Bordes redondeados */
     position: fixed;
@@ -74,6 +74,9 @@ nav ul li a.active {
 /* Colores diferenciados para cada enlace */
 nav ul li:nth-child(1) a {
     background-color: #ff6b6b;  /* Color para "Inicio" */
+        display: inline-flex;
+        align-items: center; /* Alinea verticalmente el texto y el icono */
+        text-decoration: none; /* Elimina subrayado si es un enlace */
 }
 nav ul li:nth-child(2) a {
     background-color: #1dd1a1;  /* Color para "Proyectos" */
@@ -87,6 +90,8 @@ nav ul li:nth-child(3) a {
     height: 80px;
     border-radius: 50%;
 }
+
+
 
 /* Contenedor de contenido principal */
 .content-container {
@@ -102,12 +107,65 @@ nav ul li:nth-child(3) a {
 }
 
 /* Estilo para el badge */
-.badge {
-    background-color: rgb(78, 211, 60);
-    padding: 5px 15px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    font-size: 18px;
+/* From Uiverse.io by Spacious74 */ 
+.button {
+    font-size: 1.4rem;
+    border-radius: 16px;
+    border: none;
+    padding: 2px;
+    background: radial-gradient(circle 80px at 80% -10%, #ffffff, #181b1b);
+    position: relative;
+}
+.button::after {
+    content: "";
+    position: absolute;
+    width: 65%;
+    height: 60%;
+    border-radius: 120px;
+    top: 0;
+    right: 0;
+    box-shadow: 0 0 20px #ffffff38;
+    z-index: -1;
+}
+
+.blob1 {
+    position: absolute;
+    width: 70px;
+    height: 100%;
+    border-radius: 16px;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(
+    circle 60px at 0% 100%,
+    #3fe9ff,
+    #0000ff80,
+    transparent
+    );
+    box-shadow: -10px 10px 30px #0051ff2d;
+}
+
+.inner {
+    padding: 14px 25px;
+    border-radius: 14px;
+    color: #fff;
+    z-index: 3;
+    position: relative;
+    background: radial-gradient(circle 80px at 80% -50%, #777777, #0f1111);
+}
+.inner::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 14px;
+    background: radial-gradient(
+    circle 60px at 0% 100%,
+    #00e1ff1a,
+    #0000ff11,
+    transparent
+    );
+    position: absolute;
 }
 
 /* Estilos de los títulos */
@@ -120,7 +178,33 @@ h1 {
     font-size: 48px;
     color: rgb(255, 255, 255);
 }
+/* Animación de texto brillante */
+.btn-shine {
+    display: inline-block;
+    color: #fff;
+    background: linear-gradient(to right, #9f9f9f 0%, #fff 50%, #868686 100%);
+    background-size: 200%; /* Asegura que el gradiente cubra todo el texto */
+    background-position: -100%; /* Comienza fuera del texto */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+    font-weight: 600;
+    font-size: 2.5rem; /* Ajusta según el diseño */
+    font-family: inherit; /* Hereda la fuente del h1 */
+    text-align: center;
+}
 
+@keyframes shine {
+    0% {
+      background-position: -200%; /* Fuera del texto a la izquierda */
+    }
+    50% {
+      background-position: 100%; /* Fuera del texto a la derecha */
+    }
+    100% {
+      background-position: -200%; /* Ciclo completo */
+    }
+}
 h2 {
     font-size: 24px;
     color: rgb(214, 214, 214);
@@ -188,17 +272,49 @@ h3 {
 
 /* Estilo para los proyectos */
 .proyectos-section {
-    padding: 50px 20px;
+    padding: 20px;
     color: #ffffff;
     text-align: center;
     margin-top: 50px;
 }
 
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px; /* Espacio entre el título y los proyectos */
+    position: relative; /* Para controlar bien su colocación */
+}
 .proyectos-section h2 {
     font-size: 36px;
     margin-bottom: 35px;
     color: #ffffff;
 }
+/* Estilo para la sección de proyectos */
+#proyectos-section {
+    position: relative;
+    padding: 40px 0;
+    background: linear-gradient(45deg, #ff6f61, #ff9f80, #fbd3e9, #9fa3f3); /* Gradiente con varios colores */
+    background-size: 400% 400%; /* Esto permite que el gradiente se mueva */
+    animation: gradientAnimation 15s ease infinite; /* Animación para cambiar el gradiente */
+    z-index: -1; /* Para que el contenido de los proyectos quede por encima del fondo */
+}
+
+/* Animación del gradiente */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Para que el contenido de los proyectos quede por encima de las partículas */
+}
+
 
 /* Estilo de cada proyecto */
 .timeline {
@@ -393,4 +509,154 @@ h3 {
     color: #fff;
     font-size: 18px;
     margin-top: 10px;
+}
+
+#skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    padding: 20px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    padding: 20px;
+    color: white;
+}
+
+#skills h2 {
+    font-size: 36px;
+    text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-bottom: 50px; /* Agrega un espacio debajo del título */
+}
+
+
+#skills::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 200px, #3e3e3e, transparent);
+    z-index: -1;
+    animation: gradientAnimation 5s infinite ease-in-out;
+}
+
+
+.skills-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    grid-template-rows: repeat(2, 1fr); /* 2 filas */
+    gap: 20px;
+    justify-items: center;
+}
+
+.skill-item {
+    background-color:#ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: scale(1.1); /* Aumenta el tamaño cuando pasas el ratón */
+    box-shadow: 0 4px 12px rgba(0, 0, 255, 0.5); /* Añade sombra */
+}
+
+.skill-logo {
+    width: 60px; /* Ajusta el tamaño del logo */
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.skill-logo:hover {
+    transform: scale(1.2); /* Ampliar solo el logo */
+}
+
+.menu-icons {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+    display: flex; /* Asegura que icono y texto estén en la misma línea */
+    align-items: center; /* Alinea verticalmente el icono y el texto */
+    justify-content: flex-start; /* Alinea el icono a la izquierda */
+    fill: white;
+    display: inline-block;   /* Asegura que el icono se comporte como un bloque en línea */
+    margin-right: 10px;               /* Elimina cualquier margen no deseado */
+    padding: 0;              /* Elimina cualquier padding */
+}
+
+/* Estilo para los botones de Saber Más */
+.shadow__btn {
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.shadow__btn {
+    background: rgb(0, 140, 255);
+    box-shadow: 0 0 25px rgb(0, 140, 255);
+}
+
+.shadow__btn:hover {
+    box-shadow: 0 0 5px rgb(0, 140, 255),
+                0 0 25px rgb(0, 140, 255),
+                0 0 50px rgb(0, 140, 255),
+                0 0 100px rgb(0, 140, 255);
+}
+
+/* From Uiverse.io by mrhyddenn */
+.loader {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.loader span {
+    display: inline-block;
+
+        position: absolute;
+        color: #fff;
+        transform: translate(-50%, -50%);
+        font-size: 38px;
+        letter-spacing: 5px;
+}
+
+.loader span:nth-child(1) {
+        color: transparent;
+        -webkit-text-stroke: 0.3px rgb(212, 212, 212);
+}
+    
+.loader span:nth-child(2) {
+        color: rgb(255, 255, 255);
+        -webkit-text-stroke: 1px rgb(219, 219, 219);
+        animation: uiverse723 3s ease-in-out infinite;
+}
+    
+@keyframes uiverse723 {
+        0%, 100% {
+        clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 
+        54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 
+        51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
 }

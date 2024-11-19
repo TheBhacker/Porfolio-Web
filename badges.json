@@ -1,7 +1,7 @@
 [
     {
         "project": "Porfolio",
-        "image": "https://private-user-images.githubusercontent.com/89321496/386313374-ab6cc86c-6e2d-4733-a4aa-348b5acbfdb6.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzE2ODAyNTUsIm5iZiI6MTczMTY3OTk1NSwicGF0aCI6Ii84OTMyMTQ5Ni8zODYzMTMzNzQtYWI2Y2M4NmMtNmUyZC00NzMzLWE0YWEtMzQ4YjVhY2JmZGI2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDExMTUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMTE1VDE0MTIzNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTE2ZTk3MTNhY2ZmY2FkZTgzOWU0ZGMzNmZlYThjZjc3NzJmOTQ1YTYxNmYxNzY2NzIyZGZiOTA1ODYzOGI4NzcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.LMsfRyKDAKN4FPnJxOwfsxIbMR2IJeAP7cHyxdB_uNM",  
+        "image": "https://lh5.googleusercontent.com/kwTM6gX94Hf7PKRCfHoDe75GvdEruCZEZ61HpmyxowTxyG_CWnpX4p1P_FW5nGLyuMlLEjXQKaSP-33WxvWq93uA3_sSw5SAyxTMmE2U8yytuGVpCwxMv7-SeZ4yaj8QKA=w1280",  
         "description": "Este es mi portafolio personal donde muestro mis proyectos y habilidades en desarrollo web. Utilizo tecnologías como HTML, CSS y JavaScript para crear páginas web responsivas y dinámicas.",
         "link": "https://github.com/TheBhacker/porfolio-web",
         "badges": [
@@ -25,7 +25,7 @@
         "description": "Proyecto de personalización de Kali Linux para mejorar su rendimiento y funcionalidades. Este proyecto incluye scripts personalizados y configuraciones optimizadas para seguridad y pruebas de penetración.",
         "link": "https://github.com/TheBhacker/KaliLinux_Custom",
         "badges": [
-            {"name": "Bash", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/gnubash.svg", "color": "#757575"}
+            {"name": "Bash", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/gnubash.svg", "color": "#999999"}
         ]
     }
 ]
