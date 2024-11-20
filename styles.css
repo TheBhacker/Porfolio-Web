@@ -55,15 +55,14 @@ nav ul li a {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 20px;  /* Bordes redondeados */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     display: inline-block;  /* Asegura que el padding funcione correctamente */
 }
 
 /* Efecto de sombreado en hover */
 nav ul li a:hover {
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);  /* Sombra en hover */
-    transform: scale(1.05);  /* Aumenta ligeramente el tamaño en hover */
-}
+    transform: scale(1.05);}
 
 /* Estilo para el estado activo de los enlaces */
 nav ul li a.active {
@@ -83,6 +82,10 @@ nav ul li:nth-child(2) a {
 }
 nav ul li:nth-child(3) a {
     background-color: #54a0ff;  /* Color para "Contacto" */
+}
+
+nav ul li:nth-child(4) a {
+    background-color: #292929;  /* Color para "Blog" */
 }
 /* Avatars */
 .avatar {
@@ -299,6 +302,13 @@ h3 {
     z-index: -1; /* Para que el contenido de los proyectos quede por encima del fondo */
 }
 
+.proyectos-section h3 {
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 24px;
+}
 /* Animación del gradiente */
 @keyframes gradientAnimation {
     0% { background-position: 0% 50%; }
@@ -368,9 +378,10 @@ h3 {
 
 .timeline-description {
     font-size: 0.9rem; /* Reducir el tamaño de la descripción */
-    color: #ccc; /* Cambiar color para que no sea tan pesado */
+    color: #ffffff; /* Cambiar color para que no sea tan pesado */
     line-height: 1.4; /* Ajustar interlineado */
-    margin-bottom: 10px; /* Espacio debajo de la descripción */
+    margin-bottom: 20px; /* Espacio debajo de la descripción */
+    text-shadow: rgba(0, 123, 255, 0.1);
 }
 /* Efecto de foco para accesibilidad (cuando el enlace está en foco) */
 .timeline-link:focus, .timeline-link:hover {
@@ -512,6 +523,7 @@ h3 {
 }
 
 #skills {
+    margin-bottom: 75px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -521,7 +533,7 @@ h3 {
     color: white;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 75px;
     padding: 20px;
     color: white;
 }
@@ -531,7 +543,7 @@ h3 {
     text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.5);
     color: white;
     text-align: center; /* Centra el texto horizontalmente */
-    margin-bottom: 50px; /* Agrega un espacio debajo del título */
+    margin-bottom: 70px; /* Agrega un espacio debajo del título */
 }
 
 
@@ -545,16 +557,6 @@ h3 {
     background: radial-gradient(circle at 50% 200px, #3e3e3e, transparent);
     z-index: -1;
     animation: gradientAnimation 5s infinite ease-in-out;
-}
-
-
-.skills-container {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-    grid-template-rows: repeat(2, 1fr); /* 2 filas */
-    gap: 20px;
-    justify-items: center;
 }
 
 .skill-item {
@@ -659,4 +661,250 @@ h3 {
         clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 
         51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
     }
+}
+
+/* Contenedor principal para organizar las skills */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+  /* Botón de estilo principal */
+.light-button button.bt {
+    position: relative;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    outline: none;
+    background: none;
+    border: none;
+}
+
+  /* Contenedor del botón */
+.light-button button.bt .button-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    background-color: #0a0a0a;
+    border-radius: 5px;
+    color: #0f0f0f;
+    font-weight: 700;
+    transition: 300ms;
+    outline: #0f0f0f 2px solid;
+    outline-offset: 20;
+}
+
+  /* Iconos dentro del botón */
+.light-button button.bt .button-holder img {
+    height: 50px;
+    width: auto;
+    margin-bottom: 8px;
+    transition: 300ms;
+}
+
+  /* Estilo de texto del botón */
+.light-button button.bt .button-holder p {
+    margin: 0;
+    font-size: 14px;
+    color: inherit;
+}
+
+  /* Efectos al pasar el ratón */
+.light-button button.bt:hover .button-holder {
+    color: rgb(235, 235, 235);
+    outline: rgb(255, 255, 255) 2px solid;
+    outline-offset: 2px;
+}
+
+.light-button button.bt:hover .button-holder img {
+    transform: scale(1.1);
+}
+
+  /* Icono SVG (opcional, si se usa además de las imágenes) */
+.light-button button.bt .button-holder svg {
+    height: 50px;
+    fill: #0f0f0f;
+    transition: 300ms;
+}
+
+.light-button button.bt:hover .button-holder svg {
+    fill: rgb(211, 211, 211);
+}
+
+  /* Contenedor de la luz y efectos visuales */
+.light-button button.bt .light-holder {
+    position: absolute;
+    height: 200px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.light-button button.bt .light-holder .dot {
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #0a0a0a;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.light-button button.bt .light-holder .light {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
+    background: transparent;
+}
+
+.light-button button.bt:hover .light-holder .light {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+    rgb(255, 245, 243) 0%,
+    rgba(200, 20, 100, 0) 75%,
+    rgba(200, 20, 100, 0) 100%
+    );
+}
+
+.light-button button.bt .button-holder svg,
+.light-button button.bt .button-holder img {
+  opacity: 0; /* Inicialmente oculto */
+  visibility: hidden; /* El logo no es visible */
+  transform: scale(0.8); /* Escala pequeña por defecto */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave de opacidad y escala */
+}
+
+/* Cuando pasas el ratón por encima */
+.light-button button.bt:hover .button-holder svg,
+.light-button button.bt:hover .button-holder img {
+  opacity: 1; /* El logo es visible */
+  visibility: visible; /* Hace visible el logo */
+  transform: scale(1); /* Escala el logo a su tamaño original */
+}
+
+/* From Uiverse.io by omriluz */ 
+.form-container {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    width: 400px;
+    background: linear-gradient(#212121, #212121) padding-box,
+                linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+    border: 2px solid transparent;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-size: 200% 100%;
+    animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+    background-position: 0% 50%;
+    }
+
+    50% {
+    background-position: 100% 50%;
+    }
+
+    100% {
+    background-position: 0% 50%;
+    }
+}
+
+.form-container button:active {
+    scale: 0.95;
+}
+
+.form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.form-container .form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    resize: none;
+    color: #fff;
+    height: 96px;
+    border: 1px solid #414141;
+    background-color: transparent;
+    font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+    opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+    outline: none;
+    border-color: #e81cff;
+}
+
+.form-container .form-group textarea:focus {
+    outline: none;
+    border-color: #e81cff;
+}
+
+.form-container .form-submit-btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+    color: #717171;
+    font-weight: 600;
+    width: 40%;
+    background: #313131;
+    border: 1px solid #414141;
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+    background-color: #fff;
+    border-color: #fff;
 }
