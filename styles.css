@@ -17,11 +17,13 @@ body {
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
-    background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
+    background: radial-gradient(125% 125% at 50% 10%, #000 40%, #3e3e3e 100%);
     color: #fff;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     padding-top: 80px;
+    overflow-x: hidden; /* Evita scroll horizontal innecesario */
 }
+
 
 /* Estilos del menú */
 nav {
@@ -87,10 +89,12 @@ nav ul li:nth-child(3) a {
 nav ul li:nth-child(4) a {
     background-color: #292929;  /* Color para "Blog" */
 }
+
+
 /* Avatars */
 .avatar {
-    width: 90px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 
@@ -178,9 +182,13 @@ h1, h2, h3 {
 }
 
 h1 {
+    margin-top: 35px;
+    margin-bottom: 30px;
     font-size: 48px;
     color: rgb(255, 255, 255);
 }
+
+
 /* Animación de texto brillante */
 .btn-shine {
     display: inline-block;
@@ -210,7 +218,7 @@ h1 {
 }
 h2 {
     font-size: 24px;
-    color: rgb(214, 214, 214);
+    color: rgb(255, 255, 255);
 }
 
 h3 {
@@ -222,7 +230,7 @@ h3 {
 .social-pills {
     display: flex;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 /* Estilo para cada pill */
@@ -276,7 +284,7 @@ h3 {
 /* Estilo para los proyectos */
 .proyectos-section {
     padding: 20px;
-    color: #ffffff;
+    color: #5baa00;
     text-align: center;
     margin-top: 50px;
 }
@@ -284,12 +292,12 @@ h3 {
 
 .section-title {
     text-align: center;
-    margin-bottom: 40px; /* Espacio entre el título y los proyectos */
+    margin-bottom: 50px; /* Espacio entre el título y los proyectos */
     position: relative; /* Para controlar bien su colocación */
 }
 .proyectos-section h2 {
     font-size: 36px;
-    margin-bottom: 35px;
+    margin-bottom: 80px;
     color: #ffffff;
 }
 /* Estilo para la sección de proyectos */
@@ -304,7 +312,7 @@ h3 {
 
 .proyectos-section h3 {
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 24px;
@@ -329,20 +337,24 @@ h3 {
 /* Estilo de cada proyecto */
 .timeline {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: column; /* Asegura que los proyectos estén apilados verticalmente */
+    gap: 20px;  /* Espacio entre proyectos */
+    align-items: center; /* Alinea los proyectos al centro */
+    justify-content: center; /* Asegura que los proyectos estén centrados verticalmente */
+    width: 100%;  /* Asegura que el contenedor ocupe todo el ancho */
 }
 
 /* Asegúrate de que los elementos dentro de cada proyecto estén alineados correctamente */
 .timeline-item {
     display: flex;
-    flex-direction: row; /* Mantener la disposición en fila */
-    gap: 20px; /* Espacio entre la parte izquierda y derecha */
+    flex-direction: row;  /* Alinea las columnas izquierda y derecha de los proyectos */
+    gap: 80px;  /* Espacio entre las dos columnas */
     padding: 20px;
-    border: 1px solid #4b4b4b;
     border-radius: 8px;
-    background-color: #333333;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;  /* Hace que los proyectos no ocupen todo el ancho */
+    max-width: 1000px;  /* Limita el tamaño máximo */
+    
 }
 
 /* Estilo del enlace en el timeline */
@@ -373,7 +385,7 @@ h3 {
 .timeline-title {
     color: #ffffff;
     font-size: 1.5rem;
-    margin-bottom: 25px; /* Espacio entre el título y la imagen */
+    margin-bottom: 65px; /* Espacio entre el título y la imagen */
 }
 
 .timeline-description {
@@ -382,6 +394,7 @@ h3 {
     line-height: 1.4; /* Ajustar interlineado */
     margin-bottom: 20px; /* Espacio debajo de la descripción */
     text-shadow: rgba(0, 123, 255, 0.1);
+    width: 350px;
 }
 /* Efecto de foco para accesibilidad (cuando el enlace está en foco) */
 .timeline-link:focus, .timeline-link:hover {
@@ -406,25 +419,24 @@ h3 {
 }
 /* Contenedor del título e imagen */
 .project-left {
+    flex: 1; /* Hace que la parte izquierda ocupe el 50% del espacio */
     display: flex;
-    flex-direction: column; /* Asegura que los elementos estén uno encima del otro */
-    align-items: center; /* Centra el contenido */
-    text-align: center; /* Centra el texto */
-    margin-bottom: 20px; /* Espacio entre cada proyecto */
-    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 8%;
 }
 
 .project-image-container {
-    position: relative;
+    position: absolute;
 }
 
 .project-image {
-    width: 100%;
+    width: 350px;
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
     margin-bottom: 10px;
 }
 
@@ -435,10 +447,14 @@ h3 {
 
 /* Contenedor derecho del proyecto */
 .project-right {
+    flex: 1; /* Hace que la parte derecha ocupe el 50% del espacio */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 40%; /* La sección de texto y badges ocupa menos espacio */
+    justify-content: space-between;
+    padding: 50px;
+    margin-left: 8%;
+    width: 600px;
+    height: auto;
 }
 
 /* Estilo para las badges de lenguajes */
@@ -559,30 +575,6 @@ h3 {
     animation: gradientAnimation 5s infinite ease-in-out;
 }
 
-.skill-item {
-    background-color:#ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-item:hover {
-    transform: scale(1.1); /* Aumenta el tamaño cuando pasas el ratón */
-    box-shadow: 0 4px 12px rgba(0, 0, 255, 0.5); /* Añade sombra */
-}
-
-.skill-logo {
-    width: 60px; /* Ajusta el tamaño del logo */
-    height: 60px;
-    transition: transform 0.3s ease;
-}
-
-.skill-logo:hover {
-    transform: scale(1.2); /* Ampliar solo el logo */
-}
 
 .menu-icons {
     margin-right: 10px; /* Espacio entre el icono y el texto */
@@ -597,7 +589,7 @@ h3 {
 
 /* Estilo para los botones de Saber Más */
 .shadow__btn {
-    padding: 10px 20px;
+    padding: 8px 5px;
     border: none;
     font-size: 17px;
     color: #fff;
@@ -609,7 +601,16 @@ h3 {
     transition-property: box-shadow;
     margin-bottom: 20px;
     margin-top: 10px;
+    width: 200px;
+    height: 40px; /* Asigna un valor a la altura */
+    display: flex; /* Asegura que el contenido dentro del botón se alinee correctamente */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    text-align: center; /* Asegura que el texto también esté centrado */
+    margin-left: auto;  /* Centra el botón en su contenedor */
+    margin-right: auto; /* Centra el botón en su contenedor */
 }
+
 
 .shadow__btn {
     background: rgb(0, 140, 255);
@@ -632,9 +633,8 @@ h3 {
 
 .loader span {
     display: inline-block;
-
         position: absolute;
-        color: #fff;
+        color: #1caa00;
         transform: translate(-50%, -50%);
         font-size: 38px;
         letter-spacing: 5px;
@@ -642,12 +642,12 @@ h3 {
 
 .loader span:nth-child(1) {
         color: transparent;
-        -webkit-text-stroke: 0.3px rgb(212, 212, 212);
+        -webkit-text-stroke: 0.3px rgb(255, 255, 255);
 }
     
 .loader span:nth-child(2) {
-        color: rgb(255, 255, 255);
-        -webkit-text-stroke: 1px rgb(219, 219, 219);
+        color: rgb(72, 255, 0);
+        -webkit-text-stroke: 1px rgb(145, 255, 0);
         animation: uiverse723 3s ease-in-out infinite;
 }
     
@@ -663,131 +663,94 @@ h3 {
     }
 }
 
-/* Contenedor principal para organizar las skills */
-.skills-container {
+
+#gasses {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    flex-wrap: wrap;
 }
-  /* Botón de estilo principal */
-.light-button button.bt {
-    position: relative;
-    height: 200px;
-    display: flex;
-    align-items: flex-end;
-    outline: none;
-    background: none;
-    border: none;
-}
-
-  /* Contenedor del botón */
-.light-button button.bt .button-holder {
-    display: flex;
-    flex-direction: column;
+.gas {
+    --blur: 1.75rem;
+    --box-blur: calc(0.5 * var(--blur));
+    --glow: var(--color);
+    --size: 12rem;
     align-items: center;
+    border-radius: 12px;
+    border: 4px solid currentColor;
+    box-shadow: 
+        inset 0 0 0 2px rgba(0, 0, 0, 0.15),
+        0 0 0 2px rgba(0, 0, 0, 0.15),
+        inset 0 0 var(--box-blur) var(--glow),
+        0 0 var(--box-blur) var(--glow);
+    color: var(--color, white);
+    display: inline-flex;
+    flex-direction: column;
+    font-family: system-ui, sans-serif;
+    height: var(--size);
     justify-content: center;
-    height: 100px;
-    width: 100px;
-    background-color: #0a0a0a;
-    border-radius: 5px;
-    color: #0f0f0f;
-    font-weight: 700;
-    transition: 300ms;
-    outline: #0f0f0f 2px solid;
-    outline-offset: 20;
+    padding: 1rem;
+    width: var(--size);
 }
-
-  /* Iconos dentro del botón */
-.light-button button.bt .button-holder img {
-    height: 50px;
-    width: auto;
-    margin-bottom: 8px;
-    transition: 300ms;
+.gas img {
+    width: 100px;  /* Fixed width */
+    height: 100px; /* Fixed height */
+    object-fit: contain; /* Ensures the entire image is visible */
+    margin-bottom: 10px;
 }
-
-  /* Estilo de texto del botón */
-.light-button button.bt .button-holder p {
-    margin: 0;
-    font-size: 14px;
-    color: inherit;
+.symbol {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-top: 5px;
 }
-
-  /* Efectos al pasar el ratón */
-.light-button button.bt:hover .button-holder {
-    color: rgb(235, 235, 235);
-    outline: rgb(255, 255, 255) 2px solid;
-    outline-offset: 2px;
+.gas.html {
+    --color: #e44d26;
+    filter: brightness(125%);
+    cursor: pointer;
 }
-
-.light-button button.bt:hover .button-holder img {
-    transform: scale(1.1);
+.gas.html:hover {
+    filter: brightness(120%) drop-shadow(0 0 10px var(--glow));
 }
-
-  /* Icono SVG (opcional, si se usa además de las imágenes) */
-.light-button button.bt .button-holder svg {
-    height: 50px;
-    fill: #0f0f0f;
-    transition: 300ms;
+.gas.css {
+    --color: #1572b6;
+    filter: brightness(125%);
+    cursor: pointer;
 }
-
-.light-button button.bt:hover .button-holder svg {
-    fill: rgb(211, 211, 211);
+.gas.css:hover {
+    filter: brightness(120%) drop-shadow(0 0 10px var(--glow));
 }
-
-  /* Contenedor de la luz y efectos visuales */
-.light-button button.bt .light-holder {
-    position: absolute;
-    height: 200px;
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.gas.linux {
+    --color: #f4b400;
+    filter: brightness(125%);
+    cursor: pointer;
 }
-
-.light-button button.bt .light-holder .dot {
-    position: absolute;
-    top: 0;
-    width: 10px;
-    height: 10px;
-    background-color: #0a0a0a;
-    border-radius: 10px;
-    z-index: 2;
+.gas.linux:hover {
+    filter: brightness(120%) drop-shadow(0 0 10px var(--glow));
 }
-
-.light-button button.bt .light-holder .light {
-    position: absolute;
-    top: 0;
-    width: 200px;
-    height: 200px;
-    clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
-    background: transparent;
+.gas.python {
+    --color: #4584b6;
+    filter: brightness(125%);
+    cursor: pointer;
 }
-
-.light-button button.bt:hover .light-holder .light {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-    rgb(255, 245, 243) 0%,
-    rgba(200, 20, 100, 0) 75%,
-    rgba(200, 20, 100, 0) 100%
-    );
+.gas.python:hover {
+    filter: brightness(120%) drop-shadow(0 0 10px var(--glow));
 }
-
-.light-button button.bt .button-holder svg,
-.light-button button.bt .button-holder img {
-  opacity: 0; /* Inicialmente oculto */
-  visibility: hidden; /* El logo no es visible */
-  transform: scale(0.8); /* Escala pequeña por defecto */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave de opacidad y escala */
+.gas.bash {
+    --color: #4eaa4e;
+    filter: brightness(125%);
+    cursor: pointer;
 }
-
-/* Cuando pasas el ratón por encima */
-.light-button button.bt:hover .button-holder svg,
-.light-button button.bt:hover .button-holder img {
-  opacity: 1; /* El logo es visible */
-  visibility: visible; /* Hace visible el logo */
-  transform: scale(1); /* Escala el logo a su tamaño original */
+.gas.bash:hover {
+    filter: brightness(120%) drop-shadow(0 0 10px var(--glow));
+}
+.gas.ai {
+    --color: #e555c7;
+    filter: brightness(125%);
+    cursor: pointer;
+}
+.gas.ai:hover {
+    filter: brightness(120%) drop-shadow(0 0 10px var(--glow));
 }
 
 /* From Uiverse.io by omriluz */ 
@@ -908,3 +871,142 @@ h3 {
     background-color: #fff;
     border-color: #fff;
 }
+
+.custom-word-changer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ajusta según el espacio disponible */
+    font-family: "Poppins", sans-serif;
+}
+
+.loader-text {
+    display: flex;
+    align-items: center;
+    font-size: 28px; /* Ajusta el tamaño de la fuente */
+    font-weight: 500;
+    color: #ba55d3; /* Púrpura principal */
+}
+
+.loader-text p {
+    margin-right: 10px; /* Espacio entre el texto estático y las palabras animadas */
+}
+
+.words {
+    overflow: hidden;
+    position: relative;
+    height: 1.2em; /* Ajusta según el tamaño de la fuente */
+}
+
+.words .word {
+    display: block;
+    height: 100%;
+    animation: word-cycle 4s infinite;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 32px; /* Hace las palabras más grandes */
+    background: linear-gradient(90deg, #7effc9, #5dff6b, #33ff00); /* Gradiente atractivo */
+    -webkit-background-clip: text; /* Recorta el texto para mostrar solo el gradiente */
+    -webkit-text-fill-color: transparent; /* Oculta el color sólido */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+    line-height: 1.2;
+}
+
+/* Animación para rotar las palabras */
+@keyframes word-cycle {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-100%);
+    }
+    50% {
+        transform: translateY(-200%);
+    }
+    75% {
+        transform: translateY(-300%);
+    }
+    100% {
+        transform: translateY(-400%);
+    }
+}
+
+.stylized-soy {
+    font-family: "Poppins", sans-serif;
+    font-size: 32px; /* Ajusta el tamaño de la fuente */
+    font-weight: 600; /* Grueso pero no demasiado */
+    color: #72d355; /* Púrpura principal */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 3px; /* Espacia las letras */
+    background: linear-gradient(90deg, #20ff45, #00ff40); /* Gradiente llamativo */
+    -webkit-background-clip: text; /* Usa solo el gradiente */
+    -webkit-text-fill-color: transparent; /* Oculta el color sólido */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Sombra sutil */
+    animation: glow 2s infinite alternate; /* Animación */
+    margin-right: 20px;
+}
+
+/* Animación de brillo */
+@keyframes glow {
+    0% {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6), 0 0 10px rgba(186, 85, 211, 0.8);
+    }
+    100% {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6), 0 0 20px rgba(186, 85, 211, 1);
+    }
+}
+
+.info-table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #464dd1, #293681); /* Fondo degradado */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+    width: 80%;
+    max-width: 800px; /* Aumento del max-width para más espacio */
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.2rem;
+    color: #fff;
+    table-layout: auto; /* Asegura que el contenido se ajuste automáticamente */
+}
+
+.info-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Línea divisoria */
+    white-space: nowrap; /* Evita que el texto se corte y permite que se haga overflow */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    text-overflow: ellipsis; /* Añade puntos suspensivos en el desbordamiento */
+}
+
+.info-table tr:last-child td {
+    border-bottom: none; /* Elimina la línea del último */
+}
+
+.info-title {
+    text-align: left;
+    font-weight: bold;
+    color: #ffffff; /* Color suave para los títulos */
+}
+
+.info-data {
+    text-align: left;
+    color: #ffffff; /* Texto principal */
+    font-style: italic; /* Estilo para hacerlo más interesante */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Sombra en texto */
+}
+
+.info-table-container:hover {
+    transform: scale(1.05); /* Efecto al pasar el ratón */
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
