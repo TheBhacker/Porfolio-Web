@@ -17,7 +17,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
-    background: linear-gradient(to bottom, #000000, #222222 50%, #000000);
+    background: linear-gradient(to bottom, #000000, #414141 50%, #000000);
     color: #fff;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     padding-top: 80px;
@@ -341,7 +341,6 @@ h3 {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    background: #181818;
     overflow: hidden; /* Evita scroll o elementos fuera del contenedor */
     border-radius: 12px; /* Opcional, redondea los bordes */
 }
@@ -390,6 +389,7 @@ h3 {
 }
 
 .timeline-description {
+    text-align: justify;
     font-size: 0.9rem; /* Reducir el tamaño de la descripción */
     color: #ffffff; /* Cambiar color para que no sea tan pesado */
     line-height: 1.4; /* Ajustar interlineado */
@@ -453,7 +453,7 @@ h3 {
     flex-direction: column;
     justify-content: space-between;
     padding: 50px;
-    margin-left: 8%;
+    margin-left: 5%;
     width: 600px;
     height: auto;
 }
@@ -635,7 +635,7 @@ h3 {
 .loader span {
     display: inline-block;
         position: absolute;
-        color: #1caa00;
+        color: #2998ff;
         transform: translate(-50%, -50%);
         font-size: 38px;
         letter-spacing: 5px;
@@ -647,8 +647,8 @@ h3 {
 }
     
 .loader span:nth-child(2) {
-        color: rgb(72, 255, 0);
-        -webkit-text-stroke: 1px rgb(145, 255, 0);
+        color: rgb(0, 183, 255);
+        -webkit-text-stroke: 1px rgb(0, 235, 243);
         animation: uiverse723 3s ease-in-out infinite;
 }
     
@@ -899,7 +899,7 @@ h3 {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 32px; /* Hace las palabras más grandes */
-    background: linear-gradient(90deg, #7effc9, #5dff6b, #33ff00); /* Gradiente atractivo */
+    background: linear-gradient(90deg, #0084ff, #00f7ff, #003cff); /* Gradiente atractivo */
     -webkit-background-clip: text; /* Recorta el texto para mostrar solo el gradiente */
     -webkit-text-fill-color: transparent; /* Oculta el color sólido */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra sutil */
@@ -932,7 +932,7 @@ h3 {
     color: #ffffff; /* Púrpura principal */
     text-transform: uppercase; /* Convierte el texto a mayúsculas */
     letter-spacing: 3px; /* Espacia las letras */
-    background: linear-gradient(90deg, #20ff45, #00ff40); /* Gradiente llamativo */
+    background: linear-gradient(90deg, #20ffec, #0099ff); /* Gradiente llamativo */
     -webkit-background-clip: text; /* Usa solo el gradiente */
     -webkit-text-fill-color: transparent; /* Oculta el color sólido */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Sombra sutil */
@@ -1001,5 +1001,53 @@ h3 {
     transition: transform 0.3s ease-in-out;
 }
 
+/* Sección Sobre mí */
+#sobre-mi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.sobre-mi-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.sobre-mi-descripcion {
+    flex: 1;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.sobre-mi-descripcion h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #58a6ff;
+}
+
+.sobre-mi-descripcion p {
+    margin-bottom: 15px;
+}
+
+.sobre-mi-gif {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra el GIF verticalmente */
+}
+
+.sobre-mi-gif img {
+    max-width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+}
 
 
