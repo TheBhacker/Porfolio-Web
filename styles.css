@@ -10,6 +10,17 @@ html {
     scroll-behavior: smooth; /* Asegura que el scroll se realice suavemente */
 }
 
+.full-screen {
+    height: 100vh; /* 100% de la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    background: linear-gradient(to bottom, #000000, #414141 50%, #000000);
+    color: white;
+    text-align: center;
+    width: 100%;
+}
 /* Estilo para el fondo */
 body {
     display: flex;
@@ -19,7 +30,7 @@ body {
     min-height: 100vh;
     background: linear-gradient(to bottom, #000000, #414141 50%, #000000);
     color: #fff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     padding-top: 80px;
     overflow-x: hidden; /* Evita scroll horizontal innecesario */
 }
@@ -80,13 +91,17 @@ nav ul li:nth-child(1) a {
         text-decoration: none; /* Elimina subrayado si es un enlace */
 }
 nav ul li:nth-child(2) a {
-    background-color: #1dd1a1;  /* Color para "Proyectos" */
+    background-color: #00b344;  /* Color para "Proyectos" */
 }
 nav ul li:nth-child(3) a {
-    background-color: #54a0ff;  /* Color para "Contacto" */
+    background-color: #64889c;  /* Color para "Contacto" */
 }
 
 nav ul li:nth-child(4) a {
+    background-color: #0066ff;  /* Color para "Blog" */
+}
+
+nav ul li:nth-child(5) a {
     background-color: #292929;  /* Color para "Blog" */
 }
 
@@ -98,7 +113,18 @@ nav ul li:nth-child(4) a {
     border-radius: 50%;
 }
 
+/* Elementos ocultos inicialmente */
+.hidden {
+    opacity: 0; /* Invisible */
+    transform: translateY(50px); /* Posición inicial desplazada */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
 
+/* Elementos que aparecen al hacer scroll */
+.show {
+    opacity: 1; /* Totalmente visible */
+    transform: translateY(0); /* Posición original */
+}
 
 /* Contenedor de contenido principal */
 .content-container {
@@ -122,6 +148,7 @@ nav ul li:nth-child(4) a {
     padding: 2px;
     background: radial-gradient(circle 80px at 80% -10%, #ffffff, #181b1b);
     position: relative;
+    margin-top: -100px;
 }
 .button::after {
     content: "";
@@ -188,7 +215,6 @@ h1 {
     color: rgb(255, 255, 255);
 }
 
-
 /* Animación de texto brillante */
 .btn-shine {
     display: inline-block;
@@ -203,6 +229,7 @@ h1 {
     font-size: 2.5rem; /* Ajusta según el diseño */
     font-family: inherit; /* Hereda la fuente del h1 */
     text-align: center;
+    margin-bottom: 50px;
 }
 
 @keyframes shine {
@@ -230,7 +257,7 @@ h3 {
 .social-pills {
     display: flex;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 /* Estilo para cada pill */
@@ -311,11 +338,11 @@ h3 {
 }
 
 .proyectos-section h3 {
-    color: white;
+    color: #58a6ff;
     margin-bottom: 50px;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-size: 24px;
+    font-size: 30px;
 }
 /* Animación del gradiente */
 @keyframes gradientAnimation {
@@ -348,9 +375,12 @@ h3 {
 
 /* Asegúrate de que los elementos dentro de cada proyecto estén alineados correctamente */
 .timeline-item {
+    justify-content: center;
+    position: relative;
+    justify-items: center;
     display: flex;
+    gap: 100px;
     flex-direction: row;  /* Alinea las columnas izquierda y derecha de los proyectos */
-    gap: 80px;  /* Espacio entre las dos columnas */
     padding: 20px;
     width: 100%;  /* Hace que los proyectos no ocupen todo el ancho */
     max-width: 1000px;  /* Limita el tamaño máximo */
@@ -425,7 +455,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-right: 8%;
+    margin-left: 250px;
 }
 
 .project-image-container {
@@ -635,10 +665,11 @@ h3 {
 .loader span {
     display: inline-block;
         position: absolute;
-        color: #2998ff;
+        color: #0011ff;
         transform: translate(-50%, -50%);
         font-size: 38px;
         letter-spacing: 5px;
+        text-shadow: rgba(0, 0, 0, 0.8);
 }
 
 .loader span:nth-child(1) {
@@ -648,7 +679,7 @@ h3 {
     
 .loader span:nth-child(2) {
         color: rgb(0, 183, 255);
-        -webkit-text-stroke: 1px rgb(0, 235, 243);
+        -webkit-text-stroke: 1px rgb(0, 110, 255);
         animation: uiverse723 3s ease-in-out infinite;
 }
     
@@ -866,10 +897,10 @@ h3 {
 }
 
 .custom-word-changer {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Ajusta según el espacio disponible */
     font-family: "Poppins", sans-serif;
 }
 
@@ -938,6 +969,7 @@ h3 {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Sombra sutil */
     animation: glow 2s infinite alternate; /* Animación */
     margin-right: 20px;
+    margin-left: 10px;
 }
 
 /* Animación de brillo */
@@ -1027,7 +1059,7 @@ h3 {
 }
 
 .sobre-mi-descripcion h2 {
-    font-size: 2rem;
+    font-size: 38px;
     margin-bottom: 20px;
     color: #58a6ff;
 }
