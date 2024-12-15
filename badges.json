@@ -20,10 +20,10 @@
         ]
     },
     {
-        "project": "KaliLinux_Custom", 
-        "image": "https://i.ytimg.com/vi/Mk8rG-Eu0vI/maxresdefault.jpg",  
-        "description": "Proyecto de personalización de Kali Linux para mejorar su rendimiento y funcionalidades. Este proyecto incluye scripts personalizados y configuraciones optimizadas para seguridad y pruebas de penetración.",
-        "link": "https://github.com/TheBhacker/KaliLinux_Custom",
+        "project": "Custom-Bspwm", 
+        "image": "https://github.com/TheBhacker/Custom-Bspwm/blob/main/Preview/preview2.png",  
+        "description": "Este repositorio contiene un script y configuraciones personalizadas para configurar un entorno minimalista y funcional con bspwm, sxhkd, zsh, picom, y polybar en Kali Linux.",
+        "link": "https://github.com/TheBhacker/Custom-Bspwm",
         "badges": [
             {"name": "Bash", "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/gnubash.svg", "color": "#999999"}
         ]
