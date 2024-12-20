@@ -21,7 +21,7 @@
     },
     {
         "project": "Custom-Bspwm", 
-        "image": "https://raw.githubusercontent.com/TheBhacker/Custom-Bspwm/refs/heads/main/Preview/preview1.png",  
+        "image": "https://raw.githubusercontent.com/TheBhacker/Custom-Bspwm/refs/heads/main/Preview/entorno.png",  
         "description": "Este repositorio contiene un script y configuraciones personalizadas para configurar un entorno minimalista y funcional con bspwm, sxhkd, zsh, picom, y polybar en Kali Linux.",
         "link": "https://github.com/TheBhacker/Custom-Bspwm",
         "badges": [
