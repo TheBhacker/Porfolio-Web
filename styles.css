@@ -314,6 +314,7 @@ h3 {
     color: #5baa00;
     text-align: center;
     margin-top: 50px;
+    background-color: linear-gradient(to bottom, #000000, #333333);
 }
 
 
@@ -331,10 +332,11 @@ h3 {
 #proyectos-section {
     position: relative;
     padding: 40px 0;
+    margin-top: 20px;
     background: linear-gradient(45deg, #ff6f61, #ff9f80, #fbd3e9, #9fa3f3); /* Gradiente con varios colores */
     background-size: 400% 400%; /* Esto permite que el gradiente se mueva */
     animation: gradientAnimation 15s ease infinite; /* Animación para cambiar el gradiente */
-    z-index: -1; /* Para que el contenido de los proyectos quede por encima del fondo */
+    z-index: 2; /* Para que el contenido de los proyectos quede por encima del fondo */
 }
 
 .proyectos-section h3 {
@@ -419,7 +421,7 @@ h3 {
 }
 
 .timeline-description {
-    text-align: justify;
+    text-align:left;
     font-size: 0.9rem; /* Reducir el tamaño de la descripción */
     color: #ffffff; /* Cambiar color para que no sea tan pesado */
     line-height: 1.4; /* Ajustar interlineado */
@@ -463,7 +465,7 @@ h3 {
 }
 
 .project-image {
-    width: 350px;
+    width: 500px;
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease;
@@ -1049,6 +1051,7 @@ h3 {
     gap: 30px;
     max-width: 1200px;
     width: 100%;
+    margin-top: 70px;
 }
 
 .sobre-mi-descripcion {
