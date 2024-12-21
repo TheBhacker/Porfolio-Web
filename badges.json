@@ -30,7 +30,7 @@
     },
     {
         "project": "Mediateca", 
-        "image": "https://private-user-images.githubusercontent.com/89321496/392078908-6754fe93-f2b5-4688-9c5b-ceae5e0db6a7.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzQ3NDAzOTQsIm5iZiI6MTczNDc0MDA5NCwicGF0aCI6Ii84OTMyMTQ5Ni8zOTIwNzg5MDgtNjc1NGZlOTMtZjJiNS00Njg4LTljNWItY2VhZTVlMGRiNmE3LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEyMjElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMjIxVDAwMTQ1NFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRjNThjODMwN2IyNjY4MTViY2QxNzllOTM4ZjBhZDMyMjM1MjcyNmMyNTJhMzIxNTY3M2U4YjU3OTkxNTMxYjcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.HAhX5kbxN6Iq0uYiMTqS1SQe_oHOIGYLzmJzVfTcBHU",  
+        "image": "https://raw.githubusercontent.com/TheBhacker/Mediateca/refs/heads/main/imagenes/landing.png",  
         "description": "Web de una mediateca tecnológica creada con HTML, CSS y JavaScript, diseñada para ofrecer recursos educativos y tecnológicos con un diseño moderno, navegación intuitiva e interactividad avanzada",
         "link": "https://github.com/TheBhacker/Mediateca",
         "badges": [
